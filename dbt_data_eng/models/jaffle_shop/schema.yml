@@ -1,0 +1,16 @@
+
+version: 2
+
+models:
+  - name: customers
+    description: "Join table of jaffle shop"
+    docs:
+      show: true
+    config:
+      materialized: incremental
+      incremental_strategy: merge
+      alias: customer_orders
+      cluster_by:
+        - 'most_recent_order_date'
+
+

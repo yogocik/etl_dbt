@@ -1,0 +1,13 @@
+dbt_data_eng:
+  outputs:
+    dev:
+      account: <your snowflake account, part of url i.e CV10772.ap-asia-2.gcp>
+      database: <target database on snowflake>
+      password: <user password>
+      role: <user access roles i.e PUBLIC>
+      schema: <target schema of target database in the snowflake i.e PUBLIC> 
+      threads: <expected used threads for query job parallelism>
+      type: <type of data platform connector i.e snowflake>
+      user: <username of user>
+      warehouse: <type of data warehouse engines for query>
+  target: <used profile information in outputs.dev section above i.e dev>
